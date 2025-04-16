@@ -1,0 +1,92 @@
+
+Types of Generative AI Models
+=============================
+
+1. Text Generation Models
+--------------------------
+These models generate human-like text.
+
+Examples:
+- **GPT (Generative Pretrained Transformer)**: ChatGPT by OpenAI
+- **BERT (Bidirectional Encoder Representations from Transformers)**: Good for understanding context but not for generation
+- **T5 (Text-to-Text Transfer Transformer)**: Converts all NLP tasks into a text-to-text format
+
+Use Cases:
+- Chatbots
+- Writing assistants
+- Summarization
+- Translation
+- Content creation
+
+2. Image Generation Models
+--------------------------
+These models generate realistic images from text or noise.
+
+Examples:
+- **DALL·E**: Text to image generation (by OpenAI)
+- **Stable Diffusion**: Open-source image generation
+- **Midjourney**: Artistic, stylized image creation
+- **GANs (Generative Adversarial Networks)**: Two networks (generator and discriminator) trained together
+
+Use Cases:
+- Art and design
+- Advertising
+- Fashion
+- Game development
+
+3. Audio & Music Generation Models
+----------------------------------
+These models create realistic audio, music, or voice from text or other audio.
+
+Examples:
+- **Suno.ai**: Music generation from prompts
+- **Jukebox (OpenAI)**: Music in different styles
+- **Google MusicLM**: Generate high-quality music from descriptions
+
+Use Cases:
+- Music composition
+- Podcasts
+- Voiceovers
+- Virtual assistants
+
+4. Video Generation Models
+---------------------------
+These models generate video clips using text or a few sample frames.
+
+Examples:
+- **Runway ML**: Text-to-video and video editing
+- **Make-A-Video (Meta)**: Experimental text-to-video generation
+- **Synthesia**: AI avatars and presenters for business videos
+
+Use Cases:
+- Marketing
+- Education
+- Films and animation
+
+5. Code Generation Models
+--------------------------
+These models help write or complete programming code.
+
+Examples:
+- **GitHub Copilot**: Code suggestion and generation (by OpenAI + GitHub)
+- **CodeGen**: Code generation based on natural language
+- **AlphaCode (DeepMind)**: Competitive programming generation
+
+Use Cases:
+- Software development
+- Auto-complete in IDEs
+- Learning code logic
+
+6. Multimodal Models
+---------------------
+These models can work across multiple data types like text + image or text + audio.
+
+Examples:
+- **GPT-4 with Vision (GPT-4V)**: Accepts text and image input
+- **CLIP (Contrastive Language–Image Pretraining)**: Understands the relationship between images and text
+- **Flamingo (DeepMind)**: Multimodal few-shot learning
+
+Use Cases:
+- Smart search
+- Accessibility
+- Creative storytelling (e.g., image + voice)

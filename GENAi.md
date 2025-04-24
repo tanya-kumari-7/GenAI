@@ -186,3 +186,102 @@ Use Cases:
 - Accessibility
 - Creative storytelling (e.g., image + voice)
 
+🌱 What is Regression in Machine Learning?
+Imagine you want to predict a value — like the price of a house based on its size. That’s what regression is all about:
+
+🔮 Regression is used to predict continuous values (like price, weight, height, temperature).
+
+🏠 Simple Example: House Price Prediction
+Let’s say you collect data like this:
+
+
+Size (sq ft)	Price ($)
+500	150,000
+1000	300,000
+1500	450,000
+Now, if someone asks, “What will be the price of a 1200 sq ft house?”, we can use regression to find the best line that fits the data and make a prediction.
+
+🔧 Types of Regression
+Let’s explore the most important ones (we’ll start simple):
+
+
+Type	What it does	Example
+Linear Regression	Draws a straight line	Predict house price based on size
+Multiple Linear Regression	Uses multiple factors	Predict price using size + location + age
+Polynomial Regression	Uses curves	Predict car value as it depreciates over time
+Logistic Regression (confusing name!)	Used for classification (not regression!)	Predict if someone will buy or not (yes/no)
+We'll mostly focus on Linear and Multiple Linear Regression first.
+
+📈 Linear Regression – Step-by-Step
+🎯 Goal:
+Find a line like this:
+
+ini
+Copy
+Edit
+Price = m * Size + b
+Where:
+
+m is the slope (how much price increases per square foot),
+
+b is the intercept (price when size = 0).
+
+✍️ Example:
+Let’s say:
+
+ini
+Copy
+Edit
+Price = 300 * Size + 0
+If size = 1000,
+
+ini
+Copy
+Edit
+Price = 300 * 1000 = 300,000
+🧪 Real Code (in Python)
+Let’s try it in simple code using sklearn:
+
+python
+Copy
+Edit
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Training Data
+size = np.array([[500], [1000], [1500]])
+price = np.array([150000, 300000, 450000])
+
+# Model
+model = LinearRegression()
+model.fit(size, price)
+
+# Predict price of 1200 sq ft house
+predicted_price = model.predict([[1200]])
+print("Predicted price:", predicted_price[0])
+🧠 Output: It will print something close to 360,000 (since it learned the price increases by 300 per sq ft).
+
+🔍 What’s happening under the hood?
+It looks at the data
+
+Tries different lines (with different slopes and intercepts)
+
+Picks the line with the least error (difference between actual and predicted values)
+
+🧮 What is "Error"?
+Suppose:
+
+Actual price: 360,000
+
+Predicted price: 350,000
+
+Then, error = 10,000
+
+Regression tries to minimize this error for all the training examples.
+
+📚 Practice Ideas
+Predict student scores based on study hours.
+
+Predict car prices based on mileage.
+
+Predict salary based on years of experience.

@@ -41,9 +41,8 @@ model.fit(hours, scores)
     The output of the predict method is the predicted score for the student. 
 """
 
-predicted_score = model.predict(np.array([[3.5]]))
-print(predicted_score)
-print(f"Predicted score for a student who studied for 3.5 hours: {predicted_score[0]}")
+predicted_score = model.predict(np.array([[3]]))
+print(f"Predicted score for a student who studied for 3 hours: {predicted_score[0]}")
 
 # Manual calculation of the predicted score
 
@@ -66,6 +65,22 @@ print(f"Predicted score for a student who studied for 3.5 hours: {predicted_scor
     ∑y = 30 + 50 + 65 = 145
     ∑xy = 1*30 + 2*50 + 3*65 = 30 + 100 + 195 = 325
     ∑x^2 = 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14
-    n = 3 (number of data points)
+    n = 6 (number of data points)
 
 """
+
+Ex = 1 + 2 + 3 + 4 + 5 + 6 
+Ey = 30 + 50 + 65 + 70 + 75 + 85
+Exy = 1*30 + 2*50 + 3*65 + 4*70 + 5*75 + 6*85
+Ex2 = 1**2 + 2**2 + 3**2 + 4**2 + 5**2 + 6**2
+n = 6
+
+m_slop = (n * Exy - (Ex * Ey)) / (n * Ex2 - (Ex**2))
+print(f"Slope of the line: {m_slop}")
+
+Intercept = (Ey - m_slop * Ex)/ n
+print(f"Intercept of the line: {Intercept}")
+
+
+y = m_slop * 3 + Intercept
+print(f"Predicted score for a student who studied for 3 hours: {y}")

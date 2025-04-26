@@ -32,3 +32,14 @@ y = m * 5 + b
 print(f"slop: {m}")
 print(f"intercept: {b}")
 print(f"Predicted score for a student who studied for 5 hours: {y}")
+
+
+
+# # Creating the model
+# # Train the model using the dataset
+
+model = LinearRegression()
+model.fit([[2], [4], [6]], [40, 60, 80])
+
+model_predicted_score = model.predict([[5]])
+print(f"Predicted score for a student who studied for 5 hours: {model_predicted_score[0]}")

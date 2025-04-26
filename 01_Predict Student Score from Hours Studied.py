@@ -33,3 +33,39 @@ print(scores)
 
 model = LinearRegression()
 model.fit(hours, scores)
+
+# Making predictions : Predicting the score for a student who studied for 3.5 hours
+""" 
+    The predict method is used to make predictions using the trained model.
+    The input to the predict method is the number of hours studied by the student.
+    The output of the predict method is the predicted score for the student. 
+"""
+
+predicted_score = model.predict(np.array([[3.5]]))
+print(predicted_score)
+print(f"Predicted score for a student who studied for 3.5 hours: {predicted_score[0]}")
+
+# Manual calculation of the predicted score
+
+"""
+    y = mx + b
+
+    where 
+    y is the predicted score, (The depending variable)
+    m is the slope of the line, (relationship between x and y , if x incrersed how much y will increase)
+    x is the number of hours studied, (The independent variable)
+    b is the y-intercept.(intercept of the line with y axis)
+
+"""
+ 
+# The slope of the line is calculated using the formula:
+#          m = (n * Σ(xy) - Σx * Σy) / (n * Σ(x^2) - (Σx)^2)
+
+"""
+    ∑x = 1 + 2 + 3 = 6
+    ∑y = 30 + 50 + 65 = 145
+    ∑xy = 1*30 + 2*50 + 3*65 = 30 + 100 + 195 = 325
+    ∑x^2 = 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14
+    n = 3 (number of data points)
+
+"""

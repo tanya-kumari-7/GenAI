@@ -44,6 +44,10 @@ print(f"Predicted salary for someone with 2.5 years experience: {y}")
 
 model = LinearRegression()
 model.fit(experience_years, salary)
+print(model.coef_)
+print(model.intercept_)
+print(model.predict([[2.5]])[0])
+
 print(f"Model slope: {model.coef_[0]}")
 print(f"Model intercept: {model.intercept_}")
 print(f"Predicted salary for someone with 2.5 years experience: {model.predict([[2.5]])[0]}")

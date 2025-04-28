@@ -1,8 +1,9 @@
+## GenAI
 
-MACHINE LEARNING - DETAILED LEARNING MAP (BEGINNER FRIENDLY)
+# MACHINE LEARNING - DETAILED LEARNING MAP (BEGINNER FRIENDLY)
 
 ---------------------------------------------
-🌱 MACHINE LEARNING (ML) - INTRODUCTION
+# 🌱 MACHINE LEARNING (ML) - INTRODUCTION
 ---------------------------------------------
 Definition:
 Machine Learning is a branch of AI where machines learn from data without being explicitly programmed.
@@ -14,7 +15,7 @@ Types of Machine Learning:
 4. Reinforcement Learning
 
 ---------------------------------------------
-1️⃣ SUPERVISED LEARNING
+#  1️⃣ SUPERVISED LEARNING
 ---------------------------------------------
 🔹 Data: Labeled (input-output pair given)
 🔹 Goal: Predict output from input
@@ -34,7 +35,7 @@ B. Regression - Predict continuous value
    - Forecast rainfall amount
 
 ---------------------------------------------
-2️⃣ UNSUPERVISED LEARNING
+# 2️⃣ UNSUPERVISED LEARNING
 ---------------------------------------------
 🔹 Data: Unlabeled (only input)
 🔹 Goal: Discover structure/pattern in data
@@ -52,14 +53,14 @@ B. Dimensionality Reduction - Reduce features
    - t-SNE for visualization
 
 ---------------------------------------------
-3️⃣ SEMI-SUPERVISED LEARNING
+# 3️⃣ SEMI-SUPERVISED LEARNING
 ---------------------------------------------
 🔹 Data: Mix of labeled and unlabeled data
 🔹 Use: When labeling data is expensive
 🔹 Example: Large dataset with few labeled points (speech, medical imaging)
 
 ---------------------------------------------
-4️⃣ REINFORCEMENT LEARNING
+# 4️⃣ REINFORCEMENT LEARNING
 ---------------------------------------------
 🔹 Data: Agent interacts with environment
 🔹 Goal: Maximize cumulative reward

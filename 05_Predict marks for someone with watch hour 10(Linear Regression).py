@@ -45,6 +45,9 @@ model = LinearRegression()
 model.fit(hours_watched, marks)
 print(model.intercept_)
 print(model.predict([[10]])[0])
+print(f"Model slope: {model.coef_[0]}")
+print(f"Model intercept: {model.intercept_}")
+print(f"Predicted marks for someone with 10 hours watched: {model.predict([[10]])[0]}") 
 
 
 

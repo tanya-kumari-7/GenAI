@@ -31,6 +31,8 @@ print("Predicted Price for 1.8K sq ft house:", y)
 size = np.array([[1], [1.5], [2], [2.5]])
 price = np.array([50, 65, 80, 95])
 
+#################################
+
 
 model = LinearRegression()
 model.fit(size, price)

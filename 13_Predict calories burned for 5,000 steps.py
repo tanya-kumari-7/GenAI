@@ -18,7 +18,10 @@ Ex2 = 2 **2 + 4 **2 + 6 ** 2
 n = 3
 
 m = (n * Exy - (Ex * Ey))/(n * Ex2 - (Ex ** 2))
+print("Slope (m):", m)
 
 b = (Ey - m * Ex)/n 
+print("Intercept (b):", b)
 
 y = m * 5000 + b
+print("Predicted Calories burned for 5,000 steps:", y)

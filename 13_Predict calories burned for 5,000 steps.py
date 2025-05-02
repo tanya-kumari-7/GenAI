@@ -25,3 +25,13 @@ print("Intercept (b):", b)
 
 y = m * 5000 + b
 print("Predicted Calories burned for 5,000 steps:", y)
+
+# prediction Using model
+
+steps = np.array([[2], [4], [6]])
+calories = np.array([80, 150, 210])
+
+model = LinearRegression()
+model.fit(steps, calories)
+predicted_calories = model.predict([[5000]])
+print("Predicted Calories burned for 5,000 steps using model:", predicted_calories[0])

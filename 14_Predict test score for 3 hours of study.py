@@ -26,3 +26,13 @@ b = ( Ey - m * Ex)/n
 print("Intercept (b):", b)
 y = m * 3 + b
 print("Predicted test score for 3 hours of study:", y)
+
+# prediction Using model
+
+hours = np.array([[1.5], [2.5], [3.5], [4.5]])
+score = np.array([45, 55, 65, 75])
+
+model = LinearRegression()
+model.fit(hours, score)
+predicted_score = model.predict([[3]])
+print("Predicted test score for 3 hours of study using model:", predicted_score[0])

@@ -22,9 +22,13 @@ n = 4
 
 m = (n * Exy - (Ex * Ey))/( n * Ex2 - (Ex**2))
 b = ( Ey - m * Ex)/n
-y = m * 27 +BACKUP
+y = m * 27 + b 
 
+print("Slope (m):", m)
+print("Intercept (b):", b)
+print("Predicted sales at 27°C:", y)    
 
+# predicting using model
 temp = np.array([[20],[22],[25],[30]])
 sales = np.array([200,240,300,400])
 
@@ -32,3 +36,6 @@ model = LinearRegression()
 model.fit(temp,sales)
 
 predicted_sales = model.predict([[27]])
+print("Slope (m):", model.coef_[0])
+print("Intercept (b):", model.intercept_[0])
+print("Predicted sales at 27°C using model:", predicted_sales[0])

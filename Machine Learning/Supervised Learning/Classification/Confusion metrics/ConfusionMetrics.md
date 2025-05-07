@@ -138,3 +138,22 @@ Use this trick:
 - **"False"** = You were **wrong**
 - **"Positive"** = You said **YES** (it's a thief, it's spam, it's a disease)
 - **"Negative"** = You said **NO** (not a thief, not spam, no disease)
+
+
+### First Letter (T or F):
+T = True
+
+This means the model correctly predicted the outcome.
+
+F = False
+
+This means the model incorrectly predicted the outcome.
+
+### Second Letter (P or N):
+P = Positive
+
+This refers to the model predicting a positive outcome (e.g., disease, fraud, spam, etc.).
+
+N = Negative
+
+This refers to the model predicting a negative outcome (e.g., no disease, no fraud, not spam, etc.).

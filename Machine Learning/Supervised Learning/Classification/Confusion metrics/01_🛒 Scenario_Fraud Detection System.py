@@ -1,4 +1,4 @@
-🔍 Situation:
+"""🔍 Situation:
 A transaction happens.
 🧾 Actually, it is a fraud.
 🤖 Your model says: "This is a genuine transaction."
@@ -43,3 +43,5 @@ So, the model missed the fraud. This is a False Negative (FN).
 False Negative (FN) = The model said "No fraud" when it was actually fraud.
 
 False Positive (FP) = The model said "Fraud" when it was actually genuine.
+
+"""

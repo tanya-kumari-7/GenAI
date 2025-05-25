@@ -132,3 +132,6 @@ Use this trick:
 - **"False"** = You were **wrong**
 - **"Positive"** = You said **YES** (it's a thief, it's spam, it's a disease)
 - **"Negative"** = You said **NO** (not a thief, not spam, no disease)
+
+
+###############################################

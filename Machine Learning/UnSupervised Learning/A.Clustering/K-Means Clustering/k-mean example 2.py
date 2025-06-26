@@ -17,3 +17,17 @@ kmeans.fit(df)
 df['cluster'] = kmeans.labels_
 
 print(df)
+
+import matplotlib.pyplot as plt
+
+# Plot the data
+plt.scatter(df['ice_cream_per_week'], df['money_spent'], c=df['cluster'], cmap='viridis', s=100)
+
+# Label the axes
+plt.xlabel('Ice Creams per Week')
+plt.ylabel('Money Spent (₹)')
+plt.title('K-Means Clustering of Ice Cream Lovers')
+
+# Show plot
+plt.show()
+

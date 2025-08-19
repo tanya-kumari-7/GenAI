@@ -79,10 +79,10 @@ Importance of corr_matrix:
         In that case, we can drop/reduce features.
 '''
 print(corr_matrix)
-corr_matrix.to_csv(r"C:\Users\Admin\Downloads\correlation_matrix.csv")
+corr_matrix.to_csv(r"C:\Users\Admin\Downloads\correlation_matrix2.csv")
 
 
-plt.figure(figsize=(12,8))
+plt.figure(figsize=(12,10))
 sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", fmt=".2f")
 plt.show()
 

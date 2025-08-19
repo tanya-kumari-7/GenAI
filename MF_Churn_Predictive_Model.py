@@ -16,6 +16,9 @@ import pandas as pd
 # from sklearn.model_selection import train_test_split
 # from sklearn.metrics import classification_report, roc_auc_score
 # from sklearn.preprocessing import LabelEncoder
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 # ===================================================================
 '''
@@ -29,8 +32,8 @@ can learn patterns and then make predictions for new datasets.
 data = pd.read_csv(r"C:\Users\Admin\Downloads\MF_churn_Working_data.csv") 
 
 # Remove display limits
-pd.set_option("display.max_rows", None)
-pd.set_option("display.max_columns", None)
+# pd.set_option("display.max_rows", None)
+# pd.set_option("display.max_columns", None)
 
 
 # Explore the Data
@@ -60,13 +63,28 @@ data['Age'].mean()
 data['Age'].median()
 data['Age'].std()
 
-
+data['churn'] = (data['Investment_tenure_since_last_investment_in_months'] > 6).astype(int)
 corr_matrix = data.corr(numeric_only=True)
 '''
 +1 → perfect positive relationship (when X ↑, Y ↑ proportionally)
 -1 → perfect negative relationship (when X ↑, Y ↓ proportionally)
 0 → no linear relationship
+
+Importance of corr_matrix:
+    1. It's helpful in feature selection 
+        If two features are very highly correlated (>0.85), they give duplicate information.
+        we can keep just one of them in the model.
+    2. correlation with churn with each column 
+    3. If features are too correlated with each other, models like Logistic Regression may become unstable.
+        In that case, we can drop/reduce features.
 '''
 print(corr_matrix)
+corr_matrix.to_csv(r"C:\Users\Admin\Downloads\correlation_matrix.csv")
+
+
+plt.figure(figsize=(12,8))
+sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", fmt=".2f")
+plt.show()
+
 # ===================================================================
 # ===================================================================

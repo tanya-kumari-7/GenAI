@@ -60,8 +60,13 @@ data['Age'].mean()
 data['Age'].median()
 data['Age'].std()
 
-
+data['churn'] = (data['Investment_tenure_since_last_investment_in_months'] > 6).astype(int)
 corr_matrix = data.corr(numeric_only=True)
+'''
++1 → perfect positive relationship (when X ↑, Y ↑ proportionally)
+-1 → perfect negative relationship (when X ↑, Y ↓ proportionally)
+0 → no linear relationship
+'''
 print(corr_matrix)
 # ===================================================================
 # ===================================================================

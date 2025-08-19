@@ -62,11 +62,6 @@ data['Age'].std()
 
 
 corr_matrix = data.corr(numeric_only=True)
-'''
-+1 → perfect positive relationship (when X ↑, Y ↑ proportionally)
--1 → perfect negative relationship (when X ↑, Y ↓ proportionally)
-0 → no linear relationship
-'''
 print(corr_matrix)
 # ===================================================================
 # ===================================================================

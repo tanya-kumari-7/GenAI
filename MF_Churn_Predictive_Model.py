@@ -11,7 +11,7 @@
 # ===================================================================
 
 import pandas as pd
-# from datetime import datetime 
+from datetime import datetime 
 # import lightgbm as lgb
 # from sklearn.model_selection import train_test_split
 # from sklearn.metrics import classification_report, roc_auc_score
@@ -46,7 +46,6 @@ data.sample(5)
 data.describe(include='object')
 data.columns
 data.dtypes
-data.select_dtypes(include='object').columns
 data.select_dtypes(include='float64').columns
 data.isnull().sum()
 data.isnull().mean()*100
@@ -54,8 +53,46 @@ data[data.isnull().any(axis=1)]
 data.nunique()
 data['occupation'].unique()
 data.duplicated().sum()
+
 # data.drop_duplicates(inplace=True)
-data['occupation'].value_counts()
+data.select_dtypes(include='object').columns
+data['gross_annual_income']
+data['dob'] = pd.to_datetime(data['dob'], format="%Y-%m-%d")
+data['dob'].dtype
+data['is_nri'].value_counts()
+data['is_nri'] = data['is_nri'].fillna("True")
+data['is_nri'].value_counts()
+data['dt_first_investment']
+data['dt_first_investment'] = pd.to_datetime(
+    data['dt_first_investment'],
+    format="mixed"
+)
+data['user_dt_created']
+data['user_dt_created'] = pd.to_datetime(
+    data['user_dt_created'],
+    format="mixed"
+)
+
+data['gold_investment_date']
+data['gold_investment_date'] = pd.to_datetime(
+    data['gold_investment_date'],
+    format="mixed"
+)
+data['nps_investment_date']
+data['nps_investment_date'] = pd.to_datetime(
+    data['nps_investment_date'],
+    format="mixed"
+)
+date_list = ["Last_Investment_on","SIP_first_investment","SIP_Last_investment","Lumsum_first_investment","Lumsum_Last_investment"]
+def change_colum_datetime(date_list):
+    for x in date_list:
+        data[x] = pd.to_datetime(
+            data[x],
+            format="mixed"
+        )
+change_colum_datetime(date_list)
+for x in date_list:
+    data[x]
 data['occupation'].value_counts(normalize=True) * 100
 data['Age'].min()
 data['Age'].max() 
